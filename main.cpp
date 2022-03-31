@@ -10,9 +10,17 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <stdio.h>
+#include <stdlib.h>
+
+#include "catDatabase.h"
+#include "addCats.h"
+
 
 int main() {
     printf( "Starting Animal Farm 1\n" );
+
+
+
     printf( "Done with Animal Farm 1\n" );
 
 }

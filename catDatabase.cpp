@@ -9,10 +9,15 @@
 /// @date    31_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#include <stdio.h>
+
 #include "catDatabase.h"
 
-char  name[MAX_CATS][MAX_CAT_NAME];
-float weight[MAX_CATS];
-bool  isFixed[MAX_CATS];
-enum  Gender gender[MAX_CATS];
-enum  Breed breed[MAX_CATS];
+
+char  name          [MAX_CATS][MAX_CAT_NAME];
+float weight        [MAX_CATS];
+bool  isFixed       [MAX_CATS];
+enum  Gender gender [MAX_CATS];
+enum  Breed  breed  [MAX_CATS];
+
+int currentCats = 0;

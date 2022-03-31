@@ -12,17 +12,17 @@
 #pragma once
 
 #include <stdio.h>
-#include <stdlib.h>
 
-#define MAX_CATS     (30)
+#define MAX_CATS     (128)
 #define MAX_CAT_NAME (30)
-#define CURRENT_CATS  (size_t cats)
 
 enum Gender { UNKNOWN_GENDER, FEMALE, MALE };
 enum Breed  { UNKNOWN_BREED, MAINE_COON, SHORTHAIR, PERSIAN, SPHYNX, MANX };
 
-extern char  name[MAX_CATS][MAX_CAT_NAME];
-extern float weight[MAX_CATS];
-extern bool  isFixed[MAX_CATS];
-extern enum  Gender gender[MAX_CATS];
-extern enum  Breed breed[MAX_CATS];
+extern char  name          [MAX_CATS][MAX_CAT_NAME];
+extern float weight        [MAX_CATS];
+extern bool  isFixed       [MAX_CATS];
+extern enum  Gender gender [MAX_CATS];
+extern enum  Breed  breed  [MAX_CATS];
+
+extern int currentCats;
