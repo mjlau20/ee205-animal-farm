@@ -9,37 +9,51 @@
 /// @date    31_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 #include "addCats.h"
 
-int addCat( const char newName[], const enum Gender newGender, const enum Breed newBreed,
-            const bool newIsFixed, const float newWeight ) {
 
-    if ( name != 0 ) {
+int addCat( const char* newName,
+            const enum  Gender newGender,
+            const enum  Breed newBreed,
+            const bool  newIsFixed,
+            const float newWeight ) {
+
+   currentCats = 0;
+
+    if ( name == NULL ) {
         printf( "Cat database is full.\n" );
-        exit( 1 );
+        exit( EXIT_FAILURE );
     }
     if ( strlen(newName) <= 0 ) {
         printf( "The cat must have a name.\n" );
-        exit( 1 );
+        exit( EXIT_FAILURE );
     }
-    if ( strlen(newName) > MAX_CAT_NAME ) {
-        printf( "The cat's name must be > 30 characters.\n" );
-        exit( 1 );
+    if ( strlen(newName) > MAX_CAT_NAME - 1 ) {
+        printf( "The cat's name must be < 30 characters.\n" );
+        exit( EXIT_FAILURE );
     }
-    if ( strcmp( name[MAX_CATS], newName ) == 0 ) {
-        printf( "Cat name %s is already in the database.\n", name );
-        exit( 1 );
+    for ( int count = 0; count < currentCats; count++ ) {
+       if ( strcmp( name[count], newName ) == 0 ) {
+          printf( "Cat name %s is already in the database.\n", name );
+          exit( EXIT_FAILURE );
+       }
     }
     if ( newWeight < 0 ) {
         printf( "The cat's weight must be > 0.\n" );
-        exit( 1 );
+        exit( EXIT_FAILURE );
     }
 
-    strcpy( name[MAX_CATS], newName );
-    gender[MAX_CATS] = newGender;
-    breed[MAX_CATS] = newBreed;
-    isFixed[MAX_CATS] = newIsFixed;
-    weight[MAX_CATS] = newWeight;
+    strncpy( name[currentCats], newName, MAX_CAT_NAME );
+    gender [currentCats] = newGender;
+    breed  [currentCats] = newBreed;
+    isFixed[currentCats] = newIsFixed;
+    weight [currentCats] = newWeight;
+
+    currentCats += 1;
 
     return 0;
 }
