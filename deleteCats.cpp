@@ -2,19 +2,27 @@
 ///          University of Hawaii, College of Engineering
 /// @brief   ee205_lab_10d_animal_farm - EE 205 - Spr 2022
 ///
-/// @file    updateCats.h
+/// @file    deleteCats.cpp
 /// @version 1.0
 ///
 /// @author  Michael Lau <mjlau20@hawaii.edu>
 /// @date    07_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#pragma once
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-#include "catDatabase.h"
+#include "deleteCats.h"
 
-extern void updateCatWeight( const unsigned long index, const float newWeight );
 
-extern void updateCatName  ( const unsigned long index, const char* newName );
 
-extern bool fixCat         ( const unsigned long index );
+bool deleteAllCats() {
+
+   memset( name[currentCats], 0, sizeof( name[currentCats] ) );
+   gender [currentCats]  = UNKNOWN_GENDER ;
+   breed  [currentCats]  = UNKNOWN_BREED ;
+   isFixed[currentCats]  = False;
+   weight [currentCats]  = 0.0;
+   return True;
+}

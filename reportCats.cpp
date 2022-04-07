@@ -54,6 +54,6 @@ void printAllCats() {
                       "breed = [%d] ",     breed[count],
                       "isFixed = [%d] ",   isFixed[count],
                       "weight = [%f]",     weight[count]
-      );
+                      );
    }
 }
