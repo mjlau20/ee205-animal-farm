@@ -22,7 +22,7 @@ bool deleteAllCats() {
    memset( name[currentCats], 0, sizeof( name[currentCats] ) );
    gender [currentCats]  = UNKNOWN_GENDER ;
    breed  [currentCats]  = UNKNOWN_BREED ;
-   isFixed[currentCats]  = False;
+   isFixed[currentCats]  = false;
    weight [currentCats]  = 0.0;
-   return True;
+   return true;
 }
