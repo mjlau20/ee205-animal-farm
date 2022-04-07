@@ -2,19 +2,18 @@
 ///          University of Hawaii, College of Engineering
 /// @brief   ee205_lab_10d_animal_farm - EE 205 - Spr 2022
 ///
-/// @file    reportCats.h
+/// @file    updateCats.cpp
 /// @version 1.0
 ///
 /// @author  Michael Lau <mjlau20@hawaii.edu>
-/// @date    01_Apr_2022
+/// @date    07_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#pragma once
+#include <stdio.h>
+#include <stdlib.h>
 
-#include "catDatabase.h"
+#include "updateCats.h"
 
-extern int  findCat     ( const char* name );
 
-extern void printCat    ( const unsigned long index );
 
-extern void printAllCats();
+
