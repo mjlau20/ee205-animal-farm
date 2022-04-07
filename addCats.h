@@ -13,5 +13,8 @@
 
 #include "catDatabase.h"
 
-extern int addCat( const char newName[], const enum Gender newGender, const enum Breed newBreed,
-                   const bool newIsFixed, const float newWeight );
+extern int addCat( const char* newName,
+                   const enum Gender newGender,
+                   const enum Breed newBreed,
+                   const bool newIsFixed,
+                   const float newWeight );
