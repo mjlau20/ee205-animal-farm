@@ -26,7 +26,7 @@ void updateCatWeight( const unsigned long index, const float newWeight ) {
    weight[index] = newWeight;
 }
 
-extern void updateCatName( const unsigned long index, const char* newName ) {
+void updateCatName( const unsigned long index, const char* newName ) {
 
    if ( strlen(newName) <= 0 ) {
       printf( "The cat must have a name.\n" );
