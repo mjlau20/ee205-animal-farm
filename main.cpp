@@ -20,10 +20,19 @@
 
 
 int main() {
-    printf( "Starting Animal Farm 1\n" );
+   printf( "Starting Animal Farm 1\n" );
 
+   addCat( "Loki", MALE, PERSIAN, true, 8.5 ) ;
+   addCat( "Milo", MALE, MANX, true, 7.0 ) ;
+   addCat( "Bella", FEMALE, MAINE_COON, true, 18.2 ) ;
+   addCat( "Kali", FEMALE, SHORTHAIR, false, 9.2 ) ;
+   addCat( "Trin", FEMALE, MANX, true, 12.2 ) ;
+   addCat( "Chili", UNKNOWN_GENDER, SHORTHAIR, false, 19.0 ) ;
 
+   printAllCats();
+   int kali = findCat( "Kali" ) ;
+   printCat( kali );
 
-    printf( "Done with Animal Farm 1\n" );
+   printf( "Done with Animal Farm 1\n" );
 
 }
