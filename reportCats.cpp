@@ -9,6 +9,21 @@
 /// @date    01_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#include <stdio.h>
+#include <stdlib.h>
+
 #include "reportCats.h"
 
 
+
+int  findCat ( char* name ) {
+   
+}
+
+void printCat( int index ) {
+
+}
+
+void printAllCats() {
+
+}

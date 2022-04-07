@@ -11,4 +11,10 @@
 
 #pragma once
 
+#include "catDatabase.h"
 
+extern int  findCat ( char* name );
+
+extern void printCat( int index );
+
+extern void printAllCats();
