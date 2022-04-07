@@ -11,49 +11,35 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "reportCats.h"
+#include "catDatabase.h"
 
 
+int findCat ( const char* newName ) {
 
-int  findCat ( const char* newName ) {
-
-   for ( int count = 0; count < currentCats - 1; count++ ) {
-      if ( name[count] == newName ) {
+   for ( int count = 0; count < currentCats; count++ ) {
+      if ( strncmp( name[count], newName, MAX_CAT_NAME ) == 0 ) {
          return count;
-      }
-      else {
-         printf( "Cat name [%s] is not in the database\n", newName );
-         exit( EXIT_FAILURE );
       }
    }
 }
 
 void printCat( const unsigned long index ) {
 
-   if ( index < 0 || index > currentCats ) {
+   if (index < 0 || index > currentCats) {
       printf("animalFarm0: Bad cat [%lu]", index);
-   }
-   else {
-      printf( "cat index = [%lu] ", index,
-                      "name = [%s] ",      name[index],
-                      "gender = [%d] ",    gender[index],
-                      "breed = [%d] ",     breed[index],
-                      "isFixed = [%d] ",   isFixed[index],
-                      "weight = [%f]",     weight[index]
-                      );
+   } else {
+      printf("cat index = [%lu]  name = [%s]  gender = [%d]  breed = [%d]  isFixed = [%d]  weight = [%f]\n",
+             index, name[index], gender[index], breed[index], isFixed[index], weight[index]);
    }
 }
 
 void printAllCats() {
 
-   for ( int count = 0; count < currentCats - 1; count++ ) {
-      printf( "cat index = [%d] ", count,
-                      "name = [%s] ",      name[count],
-                      "gender = [%d] ",    gender[count],
-                      "breed = [%d] ",     breed[count],
-                      "isFixed = [%d] ",   isFixed[count],
-                      "weight = [%f]",     weight[count]
-                      );
+   for ( int count = 0; count < currentCats; count++ ) {
+      printf( "cat index = [%d]  name = [%s]  gender = [%d]  breed = [%d]  isFixed = [%d]  weight = [%f]\n",
+               count, name[count], gender[count], breed[count], isFixed[count], weight[count] );
    }
 }
