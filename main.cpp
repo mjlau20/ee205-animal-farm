@@ -14,6 +14,7 @@
 
 #include "catDatabase.h"
 #include "addCats.h"
+#include "reportCats.h"
 
 
 int main() {
