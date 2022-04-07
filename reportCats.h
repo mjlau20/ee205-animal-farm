@@ -13,7 +13,7 @@
 
 #include "catDatabase.h"
 
-extern int  findCat     ( const char* name );
+extern int  findCat     ( const char* newName );
 
 extern void printCat    ( const unsigned long index );
 
