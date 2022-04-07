@@ -38,7 +38,7 @@ int addCat( const char* newName,
     }
     for ( int count = 0; count < currentCats; count++ ) {
        if ( strcmp( name[count], newName ) == 0 ) {
-          printf( "Cat name %s is already in the database.\n", name );
+          printf( "Cat name %s is already in the database.\n", newName );
           exit( EXIT_FAILURE );
        }
     }
