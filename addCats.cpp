@@ -22,8 +22,6 @@ int addCat( const char* newName,
             const bool  newIsFixed,
             const float newWeight ) {
 
-   currentCats = 0;
-
     if ( name == NULL ) {
         printf( "Cat database is full.\n" );
         exit( EXIT_FAILURE );
@@ -37,7 +35,7 @@ int addCat( const char* newName,
         exit( EXIT_FAILURE );
     }
     for ( int count = 0; count < currentCats; count++ ) {
-       if ( strcmp( name[count], newName ) == 0 ) {
+       if ( strncmp( name[count], newName, MAX_CAT_NAME ) == 0 ) {
           printf( "Cat name %s is already in the database.\n", newName );
           exit( EXIT_FAILURE );
        }
