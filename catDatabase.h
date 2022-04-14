@@ -11,7 +11,7 @@
 
 #pragma once
 
-#include <stdio.h>
+#include <cstdio>
 
 #define MAX_CATS     (128)
 #define MAX_CAT_NAME (30)
@@ -26,3 +26,5 @@ extern enum  Gender gender [MAX_CATS];
 extern enum  Breed  breed  [MAX_CATS];
 
 extern int currentCats;
+
+extern void initializeDatabase();

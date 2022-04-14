@@ -9,20 +9,21 @@
 /// @date    07_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cstring>
 
 #include "deleteCats.h"
 
 
-
 bool deleteAllCats() {
-
-   memset( name[currentCats], 0, sizeof( name[currentCats] ) );
-   gender [currentCats]  = UNKNOWN_GENDER ;
-   breed  [currentCats]  = UNKNOWN_BREED ;
-   isFixed[currentCats]  = false;
-   weight [currentCats]  = 0.0;
+   while ( currentCats != 0 ) {
+      for ( int count = 0; count > currentCats; count++ ) {
+         memset( name[count], 0, sizeof( name[count] ) );
+         gender [count] = UNKNOWN_GENDER;
+         breed  [count] = UNKNOWN_BREED;
+         isFixed[count] = false;
+         weight [count] = 0.0;
+      }
+      currentCats -= 1;
+   }
    return true;
 }

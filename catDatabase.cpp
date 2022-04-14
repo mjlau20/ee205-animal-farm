@@ -9,7 +9,7 @@
 /// @date    31_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <stdio.h>
+#include <cstring>
 
 #include "catDatabase.h"
 
@@ -21,3 +21,16 @@ enum  Gender gender [MAX_CATS];
 enum  Breed  breed  [MAX_CATS];
 
 int currentCats = 0;
+
+void initializeDatabase() {
+   while ( currentCats != 0 ) {
+      for ( int count = 0; count > currentCats; count++ ) {
+         memset( name[count], 0, sizeof( name[count] ) );
+         gender [count] = UNKNOWN_GENDER;
+         breed  [count] = UNKNOWN_BREED;
+         isFixed[count] = false;
+         weight [count] = 0.0;
+      }
+      currentCats -= 1;
+   }
+}

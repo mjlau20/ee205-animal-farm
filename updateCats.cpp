@@ -9,9 +9,8 @@
 /// @date    07_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cstdlib>
+#include <cstring>
 
 #include "updateCats.h"
 
@@ -47,4 +46,11 @@ void updateCatName( const unsigned long index, const char* newName ) {
 
 bool fixCat( const unsigned long index ) {
 
+   if (index < 0 || index > currentCats) {
+      printf("animalFarm0: Bad cat [%lu]", index);
+      return false;
+   }
+   isFixed[index] = true;
+
+   return true;
 }

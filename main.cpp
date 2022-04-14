@@ -9,9 +9,6 @@
 /// @date    31_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <stdio.h>
-#include <stdlib.h>
-
 #include "catDatabase.h"
 #include "addCats.h"
 #include "reportCats.h"
@@ -22,6 +19,8 @@
 int main() {
    printf( "Starting Animal Farm 1\n" );
 
+   initializeDatabase();
+
    addCat( "Loki", MALE, PERSIAN, true, 8.5 ) ;
    addCat( "Milo", MALE, MANX, true, 7.0 ) ;
    addCat( "Bella", FEMALE, MAINE_COON, true, 18.2 ) ;
@@ -29,9 +28,17 @@ int main() {
    addCat( "Trin", FEMALE, MANX, true, 12.2 ) ;
    addCat( "Chili", UNKNOWN_GENDER, SHORTHAIR, false, 19.0 ) ;
 
+
    printAllCats();
    int kali = findCat( "Kali" ) ;
    printCat( kali );
+   updateCatName( kali, "Capulet" ) ;
+   updateCatWeight( kali, 9.9 ) ;
+   fixCat( kali ) ;
+   printCat( kali );
+
+   deleteAllCats();
+   printAllCats();
 
    printf( "Done with Animal Farm 1\n" );
 

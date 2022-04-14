@@ -9,9 +9,7 @@
 /// @date    01_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cstring>
 
 #include "reportCats.h"
 #include "catDatabase.h"
