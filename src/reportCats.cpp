@@ -12,13 +12,13 @@
 #include <cstring>
 
 #include "reportCats.h"
-#include "catDatabase.h"
+#include "src/catDatabase.h"
 
 
 int findCat ( const char* newName ) {
 
-   for ( int count = 0; count < currentCats; count++ ) {
-      if ( strncmp( name[count], newName, MAX_CAT_NAME ) == 0 ) {
+   for (int count = 0; count < currentCats; count++) {
+      if (strncmp(name[count], newName, MAX_CAT_NAME) == 0) {
          return count;
       }
    }
@@ -26,7 +26,7 @@ int findCat ( const char* newName ) {
 
 void printCat( const unsigned long index ) {
 
-   if (index < 0 || index > currentCats) {
+   if ( currentCats > index > 0 ) {
       printf("animalFarm0: Bad cat [%lu]", index);
    } else {
       printf("cat index = [%lu]  name = [%s]  gender = [%d]  breed = [%d]  isFixed = [%d]  weight = [%f]\n",

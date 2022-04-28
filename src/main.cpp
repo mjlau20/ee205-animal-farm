@@ -9,14 +9,15 @@
 /// @date    31_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include "catDatabase.h"
-#include "addCats.h"
+#include "src/catDatabase.h"
+#include "src/addCats.h"
 #include "reportCats.h"
 #include "updateCats.h"
 #include "deleteCats.h"
 
 
 int main() {
+
    printf( "Starting Animal Farm 1\n" );
 
    initializeDatabase();
@@ -41,5 +42,4 @@ int main() {
    printAllCats();
 
    printf( "Done with Animal Farm 1\n" );
-
 }
